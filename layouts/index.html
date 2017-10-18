@@ -35,6 +35,12 @@
             {{ end }}
           </div>
 
+          <ul class="icons">
+            {{ range .Site.Params.social }}
+              <li><a href="{{ .link | safeURL }}" class="icon fa-{{ .icon }}"><span class="label">{{ .medium }}</span></a></li>
+            {{ end }}
+          </ul>
+
         <!-- Multilanguage -->
           <div id="languages">
             {{ if .IsTranslated }}
